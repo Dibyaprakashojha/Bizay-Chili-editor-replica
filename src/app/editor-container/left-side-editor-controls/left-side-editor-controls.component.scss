@@ -1,0 +1,47 @@
+.buttonContain {
+  display: flex;
+  gap: 43px;
+  flex-direction: row;
+  margin: 0px 49px;
+  .editorButtons {
+    height: 67px;
+    width: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid transparent;
+    div {
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+    }
+    span {
+      font-weight: 600;
+      font-size: 11px;
+      line-height: 17px;
+      /* identical to box height, or 155% */
+
+      text-align: center;
+
+      color: #000000;
+    }
+    &:hover {
+      border: 1px solid #cac32f;
+      border-radius: 4px;
+      // div {
+      //    background: #686D81;
+      // }
+    }
+  }
+}
+.selected {
+  border: 1px solid #cac32f;
+  border-radius: 4px;
+  background: #cac32f;
+}
+
+
+.btn-cont{
+background-color: #cac32f;
+}

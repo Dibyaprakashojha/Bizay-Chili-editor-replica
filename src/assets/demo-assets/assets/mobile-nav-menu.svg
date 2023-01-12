@@ -1,0 +1,20 @@
+<svg width="13" height="12" viewBox="0 0 13 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>menu azul</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-32217 126)">
+<g id="menu azul">
+<g id="Line 2.7">
+<use xlink:href="#path0_stroke" transform="matrix(-1 1.05979e-16 -1.41515e-16 -1 32230 -126)" fill="#448DCB"/>
+</g>
+<g id="Line 2.8">
+<use xlink:href="#path0_stroke" transform="matrix(-1 8.47832e-17 -1.76893e-16 -1 32230 -121)" fill="#448DCB"/>
+</g>
+<g id="Line 2.9">
+<use xlink:href="#path0_stroke" transform="matrix(-1 1.05979e-16 -1.41515e-16 -1 32230 -116)" fill="#448DCB"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_stroke" d="M 1 -2C 0.447715 -2 0 -1.55228 0 -1C 0 -0.447715 0.447715 0 1 0L 1 -2ZM 12 0C 12.5523 0 13 -0.447715 13 -1C 13 -1.55228 12.5523 -2 12 -2L 12 0ZM 1 0L 12 0L 12 -2L 1 -2L 1 0Z"/>
+</defs>
+</svg>

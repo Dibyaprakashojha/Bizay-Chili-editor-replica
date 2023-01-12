@@ -1,0 +1,18 @@
+<!-- <div class="btn-cont">
+    <button class="btn-ele" mat-raised-button>frontside</button>
+    <button class="btn-ele" mat-raised-button>backside</button>
+</div> -->
+<div class="sideControls">
+    <div class="buttonContain">
+        <div class="editorButtons" (click) ="clickButton(i)" [ngClass]="{'selected':value == i}" *ngFor="let item of editorButtons ;let i = index">
+            <div>
+            </div>
+            <mat-icon>{{item.matIcon}}</mat-icon>
+            <span>
+                {{ item.name }}
+            </span>      
+        </div>
+    </div>
+</div>
+
+

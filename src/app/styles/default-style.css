@@ -1,0 +1,16 @@
+:root {
+
+    --button-color: #cac32f;
+    --button-color-hover:#b2ed6e;;
+}
+y
+
+
+.editorButtons.div{
+    background-color: var(--button-color) !important;
+
+}
+.editorButtons.hover.div{
+    background-color: var(--button-color-hover) !important;
+
+}

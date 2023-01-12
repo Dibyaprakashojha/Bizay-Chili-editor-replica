@@ -1,0 +1,61 @@
+<div class="popup" id="popup">
+  <div *ngIf="currentMsgFromLeftToPop == 0" class="textPopUp">
+    <h2 style="color: #cac32f">Text</h2>
+    <span
+      >Edit your text below, or click on the field to edit directly on your
+      design.</span
+    >
+    <div
+      class="inputList"
+      *ngFor="let item of toDos; let index = index; trackBy: trackByIndex"
+    >
+      <input
+        type="text"
+        [(ngModel)]="toDos[index].textValue"
+        (keyup)="getTextFlow(item, index)"
+      />
+    </div>
+    <button class="addInput" (click)="addInputField()">Add Text Field</button>
+  </div>
+  <div *ngIf="currentMsgFromLeftToPop == 1" class="new-image">
+    <div>
+      <h2 style="color: #cac32f">Images</h2>
+      <!-- <span style="color: #cac32f;">upload your assets here for design.</span> -->
+      <input
+        style="display: none"
+        type="file"
+        (change)="onFileSelected($event)"
+        #fileInput
+      />
+
+      <p style="margin-top: 15px" *ngIf="!value">{{ fileName }}</p>
+      <button mat-raised-button class="first-btn" (click)="fileInput.click()">
+        Browse file
+      </button>
+      <button
+        class="last-button"
+        [disabled]="value"
+        (click)="getuploadFile()"
+        mat-raised-button
+        color="accent"
+      >
+        upload
+      </button>
+    </div>
+  </div>
+  <div *ngIf="currentMsgFromLeftToPop == 2" class="background">
+    <div></div>
+  </div>
+  <div *ngIf="currentMsgFromLeftToPop == 3" class="qrCode">
+    <div></div>
+  </div>
+  <div *ngIf="currentMsgFromLeftToPop == 4" class="layers">
+    <div>
+      <h2>Layers</h2>
+      <button class="addLayers">
+        <!-- <img src="../../../assets/Icons/plus.svg" alt=""> -->
+        <span>Add layers</span>
+      </button>
+    </div>
+  </div>
+</div>

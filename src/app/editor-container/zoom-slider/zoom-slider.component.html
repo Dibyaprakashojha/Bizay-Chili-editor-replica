@@ -1,0 +1,93 @@
+<div class="Zoom-property">
+  <mat-card class="mat-card">
+    <div class="undoRedo">
+      <div class="zoom-slider">
+        <mat-icon (click)="undoChanges()" class="icon-align">undo</mat-icon>
+        <p style="margin: 0px; color: #cac32f">Undo</p>
+      </div>
+      <div class="zoom-slider">
+        <p style="margin: 0px; color: #cac32f">Redo</p>
+        <mat-icon (click)="redoChanges()" class="icon-redo">redo</mat-icon>
+      </div>
+    </div>
+
+    <div>
+      <mat-divider
+        class="divider"
+        vertical
+        style="height: 4vh; margin-right: 24px"
+      ></mat-divider>
+    </div>
+    <div class="zoom-slider">
+      <div
+        (click)="DecrementSlider()"
+        style="cursor: pointer; margin-right: 5px; margin-top: -5px"
+      >
+        <mat-icon class="minusicon">remove</mat-icon>
+      </div>
+      <mat-slider
+        max="200"
+        value="{{ zoomValue }}"
+        class="example-margin"
+        [vertical]="vertical"
+        (input)="onInputChange($event)"
+      >
+      </mat-slider>
+      <div
+        (click)="IncrementSlider()"
+        style="margin-left: 5px; margin-right: 10px"
+        class="icon-align"
+      >
+        <mat-icon class="plusicon">add</mat-icon>
+      </div>
+      <div class="Zoom-value" style="color: #cac32f">
+        <input
+          style="color: #cac32f"
+          class="input-element"
+          [(ngModel)]="zoomValue"
+          type="text"
+        />
+        %
+      </div>
+    </div>
+    <div>
+      <mat-divider
+        class="divider"
+        vertical
+        style="height: 4vh; margin-right: 24px"
+      ></mat-divider>
+    </div>
+    <div class="moreButtons" *ngIf="optionType == 'Less'">
+      <button (click)="zoomWidth()">
+        <div></div>
+        <span>Fit to page width</span>
+      </button>
+      <button (click)="zoomHeigth()">
+        <div></div>
+        <span>Fit to page height</span>
+      </button>
+      <button (click)="zoomFitPage()">
+        <div></div>
+        <span>Fit to page</span>
+      </button>
+      <button (click)="zoomFullScreen()">
+        <div></div>
+        <span>Fit to design</span>
+      </button>
+    </div>
+    <div *ngIf="optionType == 'Less'">
+      <mat-divider
+        vertical
+        style="height: 4vh; margin-right: 24px"
+      ></mat-divider>
+    </div>
+    <button class="btn-ele" (click)="showMore()" *ngIf="optionType == 'More'">
+      <mat-icon class="plusicon">add</mat-icon>
+      <span>More options</span>
+    </button>
+    <button (click)="showLess()" class="btn-ele" *ngIf="optionType == 'Less'">
+      <mat-icon class="minusicon">remove</mat-icon>
+      <span>Less options</span>
+    </button>
+  </mat-card>
+</div>

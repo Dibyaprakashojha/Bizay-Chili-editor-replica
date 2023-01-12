@@ -1,0 +1,77 @@
+
+    nav{
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-around; */
+        align-items: center;
+       border-bottom: 4px solid #eeeeed;
+    }
+    .logoAndText{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-family: Open Sans,Helvetica,Arial,sans-serif;
+        /* font-family: Arial, Helvetica, sans-serif !important; */
+    }
+    .logo{
+        margin-right: 35px;
+    }
+    button{
+            border: 1px solid #448dcb;
+            height: 36px;
+            width: 105px;
+        }
+    .lowerNav{
+        display:flex;
+        width: 100%;
+        height: 40px;
+        justify-content: center;
+
+    }
+    .topNav{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    .lowerButtons{
+        border: none;
+        background-color: transparent;
+        height: 40px;
+        width: 190px;
+        font-size: 14px;
+        font-family: Open Sans,Helvetica,Arial,sans-serif;
+    }
+    .bar{
+        height: 40px;
+        width: 1px;
+        background-color: #eeeeed;
+    }
+    .menu{
+        filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(261deg) brightness(996997%) contrast(109%);
+    }
+    .chevron{
+        filter:invert(100%) sepia(0%) saturate(7500%) hue-rotate(148deg) brightness(97%) contrast(109%); 
+        width: 20px;
+        height: 20px;
+      
+    }
+    .menuButton{
+        background-color: #448dcb;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        border-radius: 5px 5px 0px 0px;
+    }
+    .otherText{
+        color: #ffffff;
+    }
+
+
+    .dummyDimentions{
+        // display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+        display: none;
+    }

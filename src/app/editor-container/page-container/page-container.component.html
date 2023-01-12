@@ -1,0 +1,20 @@
+<!-- <div class="migration-card" *ngIf="templates && templates.length > 0">
+    <p> Pages</p>
+    <div class="pages" *ngFor="let template of templates" style="padding-top: 15px;" value="template">
+        <mat-card class="template-card" (click)="openeditor(template.index)">
+            <img mat-card-image alt="thumbnail" [src]="template.imahePath" />
+        </mat-card>
+    </div>
+</div> -->
+
+<div class="previewContainer" *ngIf="templates && templates.length > 0">
+    <p class="preview">Preview</p>
+    <div class="pageparent" *ngFor="let template of templates ;let i = index" value="template">
+        <div class="editorimg" (click)="openselectedepage(template.index)">
+            <p style="color: #ffffff;" class="mobileViewP" *ngIf="i == 0">Frontside</p>
+            <p style="color: #ffffff;" class="mobileViewP" *ngIf="i == 1">Backside</p>
+            <img mat-card-image alt="thumbnail" class="previewImage" [src]="template.imahePath" />
+        </div>
+        <p  style="color:#ffffff" class="frontpage">{{template.page}}</p>
+    </div>
+</div>

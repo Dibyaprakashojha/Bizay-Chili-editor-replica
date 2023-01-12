@@ -1,0 +1,872 @@
+<!-- <div class="editor-parent"> -->
+
+<!-- *ngIf="textFrame" -->
+
+<!-- <mat-toolbar>
+  <button (click)="sidenav.toggle()" mat-icon-button class="example-icon"
+    aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+</mat-toolbar> -->
+
+<!-- <mat-sidenav-container>
+  <mat-sidenav #sidenav opened="true" mode="side">
+    <mat-nav-list>
+      <div id="app-menu">
+        <div class="topToolbar"  *ngIf="textFrame">
+          <button #menuOptionFont="matMenuTrigger" [matMenuTriggerFor]="fontMenu"
+            (menuOpened)="isOpened(menuOptionFont.menuOpen)" (click)="buttonClicked(1)" class="common-width">
+            <div class="align-container">
+              <div class="roundIcon"></div>
+              <span class="spanStyle">Font</span>
+            </div>
+          </button>
+
+          <button (click)="buttonClicked(2)" #menuOptionSize="matMenuTrigger" class="common-width"
+            [matMenuTriggerFor]="sizeMenuDropdown">
+            <div class="align-container">
+              <div class="roundIcon"></div>
+              <span class="spanStyle">Size</span>
+            </div>
+          </button>
+
+          <button class="common-width">
+            <div class="align-container">
+              <div class="roundIcon"></div>
+              <span class="spanStyle">B</span>
+            </div>
+          </button>
+          <button class="common-width">
+            <div class="align-container">
+              <div class="roundIcon"></div>
+              <span class="spanStyle">T</span>
+            </div> -->
+<!-- <I>I</I> -->
+<!-- </button>
+          <button class="common-width" (click)="underLineText()">
+            <div class="align-container">
+              <div class="roundIcon"></div>
+              <span class="spanStyle">U</span>
+            </div> -->
+<!-- <U>U</U> -->
+<!-- </button>
+          <button class="common-width" (click)="StrickText()">
+            <div class="align-container">
+              <div class="roundIcon"></div>
+              <span class="spanStyle">S</span>
+            </div> -->
+<!-- <S>S</S> -->
+<!-- </button>
+          <button class="common-width" (click)="buttonClicked(2)" #menuOptioncolor="matMenuTrigger"
+            [matMenuTriggerFor]="colorMenuDropdown">
+            <div class="align-container">
+              <div class="roundIcon"></div>
+              <span class="spanStyle">Color</span>
+            </div>
+          </button> -->
+<!-- <mat-divider vertical style="height: 4vh; margin-right: 24px"></mat-divider> -->
+
+<!-- <button>
+                            <div class="roundIcon"></div>
+                            <span>Align</span>
+                        </button> -->
+
+<!-- <button class="common-width" (click)="buttonClicked(2)" #menuOptionAlign="matMenuTrigger"
+            [matMenuTriggerFor]="alignMenu">
+            <div class="align-container">
+              <div class="roundIcon"></div>
+              <span  class="spanStyle">Align</span>
+            </div>
+          </button>
+          <button class="common-width">
+            <div class="align-container">
+              <div class="roundIcon"></div>
+              <span class="spanStyle">Spacing</span>
+            </div>
+          </button>
+          <button class="common-width">
+            <div class="align-container">
+              <div class="roundIcon"></div>
+              <span class="spanStyle">List</span>
+            </div>
+          </button>
+          <button class="common-width">
+            <div class="align-container">
+              <div class="roundIcon"></div>
+              <span class="spanStyle">Text Effects</span>
+            </div>
+          </button>
+          <button class="common-width">
+            <div class="align-container">
+              <div class="roundIcon"></div>
+              <span class="spanStyle">Arrange</span>
+            </div>
+          </button>
+
+          <button class="common-width">
+            <div class="align-container">
+              <mat-slide-toggle class="spanStyle">Wrap Text</mat-slide-toggle>
+            </div>
+          </button> -->
+
+<!-- <button class="common-width" *ngIf="isFrameLocked === 'yes'" (click)="lockFrame()">
+            <div class="align-container"> -->
+<!-- <img src="assets/Icons/Lock.svg" alt="" /> -->
+<!-- <div class="roundIcon"></div>
+              <span class="spanStyle">Lock</span>
+            </div>
+          </button> -->
+
+<!-- <button class="common-width" *ngIf="isFrameLocked === 'no' || isFrameLocked === 'inherit'"
+            (click)="lockFrame()">
+            <div class="align-container"> -->
+<!-- <img class="img-container" src="assets/Icons/Unlock.svg" alt="" /> -->
+<!-- <div class="roundIcon"></div>
+              <span class="spanStyle">Unlock</span>
+            </div>
+          </button> -->
+
+<!-- <mat-divider vertical style="height: 4vh; margin-right: 24px"></mat-divider> -->
+<!-- <button class="common-width">
+            <div class="align-container">
+              <div (click)="deleteFrame()" class="roundIcon"></div>
+              <span class="spanStyle">Delete</span>
+            </div>
+          </button>
+        </div> -->
+
+<!-- <div class="topToolbar" *ngIf="imageFrame === 'image' && !textFrame">
+          <button class="common-width">
+            <div class="align-container">
+              <div (click)="deleteFrame()" class="roundIcon"></div>
+              <span>Delete</span>
+            </div>
+          </button>
+        </div> -->
+<!-- <button class="common-width" mat-raised-button (click)="sidenav.toggle()" color="primary">
+          Click
+        </button> -->
+
+<!-- <mat-menu #toggleButton #fontMenu="matMenu" class="fontMatMenu" (clickOutside)="closeMenu()">
+          <button class="common-width" mat-menu-item (click)="changeFontstyle(item)" [value]="item"
+            *ngFor="let item of fontFamily">
+            {{ item.fontFamily }}
+          </button>
+        </mat-menu>
+        <mat-menu (clickOutside)="closeMenu()" class="sizeMatMenu" #sizeMenuDropdown="matMenu">
+          <mat-option (click)="$event.stopPropagation()" class="sizeMenu">
+            <button class="sizeButtons" (click)="decreamentSize()">
+              <img src="assets/Icons/minus.svg" alt="" />
+            </button>
+            <input class="sizeInput" type="text" [(ngModel)]="sizeValue" />
+            <button class="sizeButtons" (click)="increamentSize()">
+              <img src="assets/Icons/plus.svg" alt="" />
+            </button>
+          </mat-option>
+        </mat-menu>
+
+        <mat-menu class="colorMatMenu" #colorMenuDropdown="matMenu">
+          <mat-tab-group animationDuration="0ms" (click)="$event.stopPropagation()">
+            <mat-tab label="Swatches">
+              <div class="chili-colorPicker__panel is-visible">
+                <ul style="list-style: none" class="chili-colorPicker__swatches">
+                  <li *ngFor="let item of colors">
+                    <span (click)="cmyk(item)" title="{{ item.color }}" class="chili-colorSwatch"
+                      [style.background-color]="item.cmykValue"></span>
+                  </li>
+                </ul>
+              </div> -->
+
+<!-- <mat-divider></mat-divider> -->
+<!-- </mat-tab>
+            <mat-tab label="Custom"> </mat-tab>
+            <mat-tab label="CMYK">CMYK</mat-tab>
+          </mat-tab-group>
+        </mat-menu>
+
+        <mat-menu #toggleButton #alignMenu="matMenu" class="alignItems" (clickOutside)="closeMenu()">
+          <mat-option (click)="$event.stopPropagation()" class="sizeMenu">
+            <div class="alignbar">
+              <button (click)="textLeft()">
+                <div class="roundIcon"></div>
+                <span class="spanStyle">Left</span>
+              </button>
+              <button (click)="textCenter()">
+                <div class="roundIcon"></div>
+                <span class="spanStyle">Center</span>
+              </button>
+              <button (click)="textRight()">
+                <div class="roundIcon"></div>
+                <span class="spanStyle">Right</span>
+              </button>
+            </div>
+          </mat-option>
+        </mat-menu>
+      </div>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content style="background-color: white">
+    <div class="app-content" style="height: 100vh">
+      <div class="editorBody">
+        <div class="popUp" [ngClass]="{ mobilePop: currentMsgFromLeftToPop == 0 }"
+          *ngIf="currentSelectedControl == 1 && success">
+          <app-editor-control-popup #child [currentMsgFromLeftToPop]="currentMsgFromLeftToPop" [textDataVal]="textData"
+            *ngIf="currentSelectedControl == 1 && isFrameRendered"></app-editor-control-popup>
+          <div class="mobileButtons" *ngIf="mobileTextPopUp">
+            <button (click)="currentMsgFromLeftToPop = null; mobileTextPopUp = false">
+              Cancel
+            </button>
+            <button (click)="currentMsgFromLeftToPop = null; mobileTextPopUp = false">
+              View Design
+            </button>
+          </div>
+        </div>
+        <app-editor (newEvent)="addItem($event)"></app-editor>
+        <div class="zoomSlider" [ngClass]="{
+            Expanded: moreOptionStatus === 'showMore',
+            collapsed: moreOptionStatus === 'showLess'
+          }">
+          <app-zoom-slider (MoreStatus)="setMoreStatus($event)"></app-zoom-slider>
+          <app-left-side-editor-controls (valueToPopUp)="fwdMsgToSib2($event)"></app-left-side-editor-controls>
+        </div>
+        <app-page-container *ngIf="isFrameRendered || success"></app-page-container>
+      </div>
+    </div>
+
+    <p *ngIf="isSidenavOpen" class="admin-sidenav-close-button">
+      <button mat-mini-fab type="button" mode="side" mat-button color="basic"
+        (click)="onSidenavToggle(); sidenav.toggle()">
+        <mat-icon matTooltip="Minimize"><span class="material-icons-outlined">
+            {{ isSidenavOpen ? "chevron_left" : "chevron_right" }}
+          </span></mat-icon>
+      </button>
+    </p>
+    <p *ngIf="!isSidenavOpen" class="admin-sidenav-close-button">
+      <button mat-mini-fab type="button" mode="side" mat-button color="basic"
+        (click)="onSidenavToggle(); sidenav.toggle()">
+        <mat-icon matTooltip="Expand"><span class="material-icons-outlined">
+            {{ isSidenavOpen ? "chevron_left" : "chevron_right" }}
+          </span></mat-icon>
+      </button>
+    </p>
+  </mat-sidenav-content> -->
+
+<!-- </div> -->
+<!-- </mat-sidenav-container> -->
+
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer
+    #drawer
+    class="example-sidenav"
+    mode="side"
+    disableClose="true"
+    opened="false"
+  >
+    <div *ngIf="!isSidenavOpen1">
+      <div id="app-menu">
+        <div class="topToolbar" *ngIf="textFrame">
+          <button
+            #menuOptionFont="matMenuTrigger"
+            [matMenuTriggerFor]="fontMenu"
+            (menuOpened)="isOpened(menuOptionFont.menuOpen)"
+            (click)="buttonClicked(1)"
+            class="common-width"
+          >
+            <div class="align-container">
+              <mat-icon>font_download</mat-icon>
+              <span>Font</span>
+            </div>
+          </button>
+
+          <button
+            (click)="buttonClicked(2)"
+            #menuOptionSize="matMenuTrigger"
+            class="common-width"
+            [matMenuTriggerFor]="sizeMenuDropdown"
+          >
+            <div class="align-container">
+              <mat-icon class="icon-ele"> format_size</mat-icon>
+              <span>Size</span>
+            </div>
+          </button>
+
+          <button class="common-width">
+            <div class="align-container">
+              <mat-icon> format_bold</mat-icon>
+              <span>Bold</span>
+            </div>
+          </button>
+
+          <button class="common-width">
+            <div class="align-container">
+              <mat-icon> format_italic</mat-icon>
+              <span>T</span>
+            </div>
+            <!-- <I>I</I> -->
+          </button>
+          <button class="common-width" (click)="underLineText()">
+            <div class="align-container">
+              <mat-icon> format_underlined</mat-icon>
+              <span>Underline</span>
+            </div>
+            <!-- <U>U</U> -->
+          </button>
+          <button class="common-width" (click)="StrickText()">
+            <div class="align-container">
+              <mat-icon> strikethrough_s</mat-icon>
+
+              <span>Strikethrough</span>
+            </div>
+            <!-- <S>S</S> -->
+          </button>
+          <button
+            class="common-width"
+            (click)="buttonClicked(2)"
+            #menuOptioncolor="matMenuTrigger"
+            [matMenuTriggerFor]="colorMenuDropdown"
+          >
+            <div class="align-container">
+              <mat-icon> format_color_fill</mat-icon>
+              <span>Color</span>
+            </div>
+          </button>
+          <!-- <mat-divider vertical style="height: 4vh; margin-right: 24px"></mat-divider> -->
+
+          <!-- <button>
+                            <div class="roundIcon"></div>
+                            <span>Align</span>
+                        </button> -->
+
+          <button
+            class="common-width"
+            (click)="buttonClicked(2)"
+            #menuOptionAlign="matMenuTrigger"
+            [matMenuTriggerFor]="alignMenu"
+          >
+            <div class="align-container">
+              <mat-icon> format_align_center</mat-icon>
+              <span>Align</span>
+            </div>
+          </button>
+          <button class="common-width">
+            <div class="align-container">
+              <mat-icon> format_line_spacing</mat-icon>
+              <span>Spacing</span>
+            </div>
+          </button>
+          <button class="common-width">
+            <div class="align-container">
+              <mat-icon> format_list_bulleted</mat-icon>
+              <span>List</span>
+            </div>
+          </button>
+          <button class="common-width">
+            <div class="align-container">
+              <mat-icon> wrap_text</mat-icon>
+              <span>Text Effects</span>
+            </div>
+          </button>
+          <button class="common-width">
+            <div class="align-container">
+              <div class="roundIcon"></div>
+              <span>Arrange</span>
+            </div>
+          </button>
+
+          <button class="common-width">
+            <div class="align-container">
+              <mat-slide-toggle>Wrap Text</mat-slide-toggle>
+            </div>
+          </button>
+
+          <button
+            class="common-width"
+            *ngIf="isFrameLocked === 'yes'"
+            (click)="lockFrame()"
+          >
+            <div class="align-container">
+              <img src="assets/Icons/Lock.svg" alt="" />
+              <span>Lock</span>
+            </div>
+          </button>
+
+          <button
+            class="common-width"
+            *ngIf="isFrameLocked === 'no' || isFrameLocked === 'inherit'"
+            (click)="lockFrame()"
+          >
+            <div class="align-container">
+              <img class="img-container" src="assets/Icons/Unlock.svg" alt="" />
+              <span>Unlock</span>
+            </div>
+          </button>
+
+          <!-- <mat-divider vertical style="height: 4vh; margin-right: 24px"></mat-divider> -->
+          <button class="common-width">
+            <div class="align-container">
+              <mat-icon>delete</mat-icon>
+              <span>Delete</span>
+            </div>
+          </button>
+        </div>
+
+        <div class="topToolbar" *ngIf="imageFrame === 'image' && !textFrame">
+          <button class="common-width">
+            <div class="align-container">
+              <div (click)="deleteFrame()" class="roundIcon"></div>
+              <span>Delete</span>
+            </div>
+          </button>
+        </div>
+
+        <mat-menu
+          #toggleButton
+          #fontMenu="matMenu"
+          class="fontMatMenu"
+          (clickOutside)="closeMenu()"
+        >
+          <button
+            class="common-width"
+            mat-menu-item
+            (click)="changeFontstyle(item)"
+            [value]="item"
+            *ngFor="let item of fontFamily"
+          >
+            {{ item.fontFamily }}
+          </button>
+        </mat-menu>
+        <mat-menu
+          (clickOutside)="closeMenu()"
+          class="sizeMatMenu"
+          #sizeMenuDropdown="matMenu"
+        >
+          <mat-option (click)="$event.stopPropagation()" class="sizeMenu">
+            <button class="sizeButtons" (click)="decreamentSize()">
+              <img src="assets/Icons/minus.svg" alt="" />
+            </button>
+            <input class="sizeInput" type="text" [(ngModel)]="sizeValue" />
+            <button class="sizeButtons" (click)="increamentSize()">
+              <img src="assets/Icons/plus.svg" alt="" />
+            </button>
+          </mat-option>
+        </mat-menu>
+
+        <mat-menu class="colorMatMenu" #colorMenuDropdown="matMenu">
+          <mat-tab-group
+            animationDuration="0ms"
+            (click)="$event.stopPropagation()"
+          >
+            <mat-tab label="Swatches">
+              <div class="chili-colorPicker__panel is-visible">
+                <ul
+                  style="list-style: none"
+                  class="chili-colorPicker__swatches"
+                >
+                  <li *ngFor="let item of colors">
+                    <span
+                      (click)="cmyk(item)"
+                      title="{{ item.color }}"
+                      class="chili-colorSwatch"
+                      [style.background-color]="item.cmykValue"
+                    ></span>
+                  </li>
+                </ul>
+              </div>
+            </mat-tab>
+            <mat-tab label="Custom"> </mat-tab>
+            <mat-tab label="CMYK">CMYK</mat-tab>
+          </mat-tab-group>
+        </mat-menu>
+
+        <mat-menu
+          #toggleButton
+          #alignMenu="matMenu"
+          class="alignItems"
+          (clickOutside)="closeMenu()"
+        >
+          <mat-option (click)="$event.stopPropagation()" class="sizeMenu">
+            <div class="alignbar">
+              <button (click)="textLeft()">
+                <div class="roundIcon"></div>
+                <span>Left</span>
+              </button>
+              <button (click)="textCenter()">
+                <div class="roundIcon"></div>
+                <span>Center</span>
+              </button>
+              <button (click)="textRight()">
+                <div class="roundIcon"></div>
+                <span>Right</span>
+              </button>
+            </div>
+          </mat-option>
+        </mat-menu>
+      </div>
+    </div>
+    <!-- <p>Auto-resizing sidenav</p>
+    <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+    <button (click)="showFiller = !showFiller" mat-raised-button>
+      Toggle extra text
+    </button> -->
+  </mat-drawer>
+
+  <p *ngIf="isSidenavOpen" class="admin-sidenav-close-button">
+    <button
+      mat-mini-fab
+      type="button"
+      mode="side"
+      mat-button
+      color="basic"
+      (click)="onSidenavToggle(); drawer.toggle()"
+    >
+      <mat-icon matTooltip="Minimize"
+        ><span class="material-icons-outlined">
+          {{ isSidenavOpen ? "chevron_left" : "chevron_right" }}
+        </span></mat-icon
+      >
+    </button>
+  </p>
+  <p *ngIf="!isSidenavOpen" class="admin-sidenav-close-button">
+    <button
+      mat-mini-fab
+      type="button"
+      mode="side"
+      mat-button
+      color="basic"
+      (click)="onSidenavToggle(); drawer.toggle()"
+    >
+      <mat-icon matTooltip="Expand"
+        ><span class="material-icons-outlined">
+          {{ isSidenavOpen ? "chevron_left" : "chevron_right" }}
+        </span></mat-icon
+      >
+    </button>
+  </p>
+
+  <!-- <div class="example-sidenav-content">
+    <button type="button" mat-button (click)="drawer.toggle()">
+      Toggle sidenav
+    </button>
+  </div> -->
+
+  <!-- Top Header -->
+  <div style="background-color: white">
+    <div class="app-content" style="height: 100vh">
+      <mat-toolbar class="navbar">
+        <a class="logo">
+          <img src="assets\acheron-logo.png" alt="company-logo" />
+        </a>
+        <span class="spacer"></span>
+        <!-- <button mat-icon-button aria-label="user profile"> -->
+        <mat-icon>account_box</mat-icon>
+        <!-- </button> -->
+      </mat-toolbar>
+      <div class="editorBody">
+        <div
+          class="popUp"
+          [ngClass]="{ mobilePop: currentMsgFromLeftToPop == 0 }"
+          *ngIf="currentSelectedControl == 1 && success"
+        >
+          <app-editor-control-popup
+            #child
+            [currentMsgFromLeftToPop]="currentMsgFromLeftToPop"
+            [textDataVal]="textData"
+            *ngIf="currentSelectedControl == 1 && isFrameRendered"
+          ></app-editor-control-popup>
+          <div class="mobileButtons" *ngIf="mobileTextPopUp">
+            <button
+              (click)="currentMsgFromLeftToPop = null; mobileTextPopUp = false"
+            >
+              Cancel
+            </button>
+            <button
+              (click)="currentMsgFromLeftToPop = null; mobileTextPopUp = false"
+            >
+              View Design
+            </button>
+          </div>
+        </div>
+        <app-editor (newEvent)="addItem($event)"></app-editor>
+        <div
+          class="zoomSlider"
+          [ngClass]="{
+            Expanded: moreOptionStatus === 'showMore',
+            collapsed: moreOptionStatus === 'showLess'
+          }"
+        >
+          <app-zoom-slider
+            (MoreStatus)="setMoreStatus($event)"
+          ></app-zoom-slider>
+          <app-left-side-editor-controls
+            (valueToPopUp)="fwdMsgToSib2($event)"
+          ></app-left-side-editor-controls>
+        </div>
+        <app-page-container
+          *ngIf="isFrameRendered || success"
+        ></app-page-container>
+      </div>
+    </div>
+
+    <!-- Toolbar for Mobile View -->
+    <mat-toolbar class="navbar-icons">
+      <div class="top-navbar-icons">
+        <div class="toolbar-icons">
+          <button
+            #menuOptionFont="matMenuTrigger"
+            [matMenuTriggerFor]="fontMenu"
+            (menuOpened)="isOpened(menuOptionFont.menuOpen)"
+            (click)="buttonClicked(1)"
+            class="common-width"
+          >
+            <div class="align-container">
+              <mat-icon>font_download</mat-icon>
+              <!-- <span>Font</span> -->
+            </div>
+          </button>
+
+          <button
+            (click)="buttonClicked(2)"
+            #menuOptionSize="matMenuTrigger"
+            class="common-width"
+            [matMenuTriggerFor]="sizeMenuDropdown"
+          >
+            <div class="align-container">
+              <mat-icon class="icon-ele"> format_size</mat-icon>
+              <!-- <span>Size</span> -->
+            </div>
+          </button>
+
+          <button class="common-width">
+            <div class="align-container">
+              <mat-icon> format_bold</mat-icon>
+              <!-- <span>Bold</span> -->
+            </div>
+          </button>
+
+          <button class="common-width">
+            <div class="align-container">
+              <mat-icon> format_italic</mat-icon>
+              <!-- <span>T</span> -->
+            </div>
+          </button>
+
+          <button class="common-width" (click)="underLineText()">
+            <div class="align-container">
+              <mat-icon> format_underlined</mat-icon>
+              <!-- <span>Underline</span> -->
+            </div>
+          </button>
+
+          <button
+            class="common-width"
+            (click)="buttonClicked(2)"
+            #menuOptioncolor="matMenuTrigger"
+            [matMenuTriggerFor]="colorMenuDropdown"
+          >
+            <div class="align-container">
+              <mat-icon> format_color_fill</mat-icon>
+              <!-- <span>Color</span> -->
+            </div>
+          </button>
+
+          <button
+            class="common-width"
+            (click)="buttonClicked(2)"
+            #menuOptionAlign="matMenuTrigger"
+            [matMenuTriggerFor]="alignMenu"
+          >
+            <div class="align-container">
+              <mat-icon> format_align_center</mat-icon>
+              <!-- <span>Align</span> -->
+            </div>
+          </button>
+
+          <button class="common-width">
+            <div class="align-container">
+              <mat-icon> format_line_spacing</mat-icon>
+              <!-- <span>Spacing</span> -->
+            </div>
+          </button>
+
+          <button class="common-width">
+            <div class="align-container">
+              <mat-icon> format_list_bulleted</mat-icon>
+              <!-- <span>List</span> -->
+            </div>
+          </button>
+
+          <button class="common-width">
+            <div class="align-container">
+              <mat-icon> wrap_text</mat-icon>
+              <!-- <span>Text Effects</span> -->
+            </div>
+          </button>
+
+          <button class="common-width">
+            <div class="align-container">
+              <div class="roundIcon"></div>
+              <!-- <span>Arrange</span> -->
+            </div>
+          </button>
+
+          <button class="common-width">
+            <div class="align-container">
+              <mat-slide-toggle>
+                <!-- Wrap Text -->
+              </mat-slide-toggle>
+            </div>
+          </button>
+
+          <button
+            class="common-width"
+            *ngIf="isFrameLocked === 'yes'"
+            (click)="lockFrame()"
+          >
+            <div class="align-container">
+              <img src="assets/Icons/Lock.svg" alt="" />
+              <!-- <span>Lock</span> -->
+            </div>
+          </button>
+
+          <button
+            class="common-width"
+            *ngIf="isFrameLocked === 'no' || isFrameLocked === 'inherit'"
+            (click)="lockFrame()"
+          >
+            <div class="align-container">
+              <img class="img-container" src="assets/Icons/Unlock.svg" alt="" />
+              <!-- <span>Unlock</span> -->
+            </div>
+          </button>
+        </div>
+
+        <div class="toolbar-icons" *ngIf="imageFrame === 'image' && !textFrame">
+          <button class="common-width">
+            <div class="align-container">
+              <div (click)="deleteFrame()" class="roundIcon"></div>
+              <span>Delete</span>
+            </div>
+          </button>
+        </div>
+
+        <mat-menu
+          #toggleButton
+          #fontMenu="matMenu"
+          class="fontMatMenu"
+          (clickOutside)="closeMenu()"
+        >
+          <button
+            class="common-width"
+            mat-menu-item
+            (click)="changeFontstyle(item)"
+            [value]="item"
+            *ngFor="let item of fontFamily"
+          >
+            {{ item.fontFamily }}
+          </button>
+        </mat-menu>
+
+        <mat-menu
+          (clickOutside)="closeMenu()"
+          class="sizeMatMenu"
+          #sizeMenuDropdown="matMenu"
+        >
+          <mat-option (click)="$event.stopPropagation()" class="sizeMenu">
+            <button class="sizeButtons" (click)="decreamentSize()">
+              <img src="assets/Icons/minus.svg" alt="" />
+            </button>
+            <input class="sizeInput" type="text" [(ngModel)]="sizeValue" />
+            <button class="sizeButtons" (click)="increamentSize()">
+              <img src="assets/Icons/plus.svg" alt="" />
+            </button>
+          </mat-option>
+        </mat-menu>
+
+        <mat-menu class="colorMatMenu" #colorMenuDropdown="matMenu">
+          <mat-tab-group
+            animationDuration="0ms"
+            (click)="$event.stopPropagation()"
+          >
+            <mat-tab label="Swatches">
+              <div class="chili-colorPicker__panel is-visible">
+                <ul
+                  style="list-style: none"
+                  class="chili-colorPicker__swatches"
+                >
+                  <li *ngFor="let item of colors">
+                    <span
+                      (click)="cmyk(item)"
+                      title="{{ item.color }}"
+                      class="chili-colorSwatch"
+                      [style.background-color]="item.cmykValue"
+                    ></span>
+                  </li>
+                </ul>
+              </div>
+            </mat-tab>
+            <mat-tab label="Custom"> </mat-tab>
+            <mat-tab label="CMYK">CMYK</mat-tab>
+          </mat-tab-group>
+        </mat-menu>
+
+        <mat-menu
+          #toggleButton
+          #alignMenu="matMenu"
+          class="alignItems"
+          (clickOutside)="closeMenu()"
+        >
+          <mat-option (click)="$event.stopPropagation()" class="sizeMenu">
+            <div class="alignbar">
+              <button (click)="textLeft()">
+                <div class="roundIcon"></div>
+                <span>Left</span>
+              </button>
+              <button (click)="textCenter()">
+                <div class="roundIcon"></div>
+                <span>Center</span>
+              </button>
+              <button (click)="textRight()">
+                <div class="roundIcon"></div>
+                <span>Right</span>
+              </button>
+            </div>
+          </mat-option>
+        </mat-menu>
+      </div>
+    </mat-toolbar>
+    <!-- Toolbar for Mobile View -->
+
+    <p *ngIf="isSidenavOpen" class="admin-sidenav-close-button">
+      <button
+        mat-mini-fab
+        type="button"
+        mode="side"
+        mat-button
+        color="basic"
+        (click)="onSidenavToggle(); drawer.toggle()"
+      >
+        <mat-icon matTooltip="Minimize"
+          ><span class="material-icons-outlined">
+            {{ isSidenavOpen ? "chevron_left" : "chevron_right" }}
+          </span></mat-icon
+        >
+      </button>
+    </p>
+    <p *ngIf="!isSidenavOpen" class="admin-sidenav-close-button">
+      <button
+        mat-mini-fab
+        type="button"
+        mode="side"
+        mat-button
+        color="basic"
+        (click)="onSidenavToggle(); drawer.toggle()"
+      >
+        <mat-icon matTooltip="Expand"
+          ><span class="material-icons-outlined">
+            {{ isSidenavOpen ? "chevron_left" : "chevron_right" }}
+          </span></mat-icon
+        >
+      </button>
+    </p>
+  </div>
+</mat-drawer-container>

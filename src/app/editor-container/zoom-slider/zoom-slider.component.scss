@@ -1,0 +1,164 @@
+.editor {
+  width: 50%;
+  height: 80vh;
+  margin: 0 auto;
+}
+
+.Zoom-property {
+  height: 48px;
+  width: auto;
+  left: 0px;
+  top: 0px;
+  border-radius: 4px;
+  padding-top: 20px;
+}
+.zoom-slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .plusicon {
+    width: 12px;
+    height: 17px;
+    cursor: pointer;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    color: #cac32f;
+  }
+  .minusicon {
+    width: 12px;
+    height: 17px;
+    left: 9px;
+    top: 19px;
+    cursor: pointer;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    color: #cac32f;
+  }
+}
+
+.mat-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0px 8px;
+}
+.undoRedo {
+  display: flex;
+  gap: 24px;
+  margin-right: 24px;
+}
+.mat-slider {
+  width: 300px;
+}
+
+.btn-ele {
+  border: 0px;
+  background-color: transparent;
+  color: #cac32f;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  height: 4vh;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    margin-right: 4px;
+  }
+  span {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    color: #cac32f;
+  }
+}
+
+.Zoom-value {
+  border: 1px solid #cac32f;
+  width: 64px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  height: 30px;
+}
+
+.input-element {
+  border: 0px;
+  width: 25px;
+}
+::ng-deep {
+  textarea:focus,
+  input:focus {
+    outline: none;
+  }
+}
+::ng-deep .mat-card {
+  background: #ffffff !important;
+  border: 1px solid #e0e3e6 !important;
+  box-shadow: 0px 4px 20px rgba(118, 126, 149, 0.25) !important;
+  border-radius: 4px !important;
+}
+.example-margin {
+  width: 10%;
+}
+
+::ng-deep .mat-accent .mat-slider-track-fill,
+.mat-accent .mat-slider-thumb,
+.mat-accent .mat-slider-thumb-label {
+  background: #cac32f !important;
+}
+
+::ng-deep .mat-slider-thumb {
+  background: #cac32f !important;
+}
+
+.icon-align {
+  padding-right: 10px;
+  cursor: pointer;
+  color: #cac32f !important;
+}
+
+.icon-redo {
+  padding-left: 10px;
+  cursor: pointer;
+  color: #cac32f !important;
+  // opacity: 0.5;
+}
+.moreButtons {
+  display: flex;
+  margin-right: 24px;
+  gap: 10px;
+  height: 7vh;
+  align-items: center;
+  button {
+    border: none;
+    background: transparent;
+    display: flex;
+    padding-left: 0px;
+    align-items: center;
+    div {
+      background-color: #cac32f;
+      border-radius: 50%;
+      margin: 8px;
+      width: 16px;
+      height: 16px;
+    }
+    span {
+      font-family: "Open Sans" !important;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 16px;
+
+      color: #cac32f;
+    }
+  }
+}
