@@ -263,7 +263,13 @@ body {
     height: 25px !important;
     margin: 4px 0 0 14px !important;
   }
+  mat-drawer-container,
+  mat-drawer-content {
+    overflow: hidden !important;
+  }
 }
+// End of Media Query
+
 button {
   border: 1px solid transparent !important;
 }
