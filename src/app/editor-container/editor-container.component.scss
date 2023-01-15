@@ -476,15 +476,19 @@ mat-sidenav {
     width: 100% !important;
     height: 100% !important;
   }
+
+  .navbar-icons {
+    padding: 0;
+    .toolbar-icons {
+      background-color: transparent;
+      display: inline-flex;
+      justify-content: flex-start;
+      width: auto;
+      padding: 0;
+    }
+  }
 }
 
-.navbar-icons {
-  padding: 0;
-  .toolbar-icons {
-    background-color: transparent;
-    display: inline-flex;
-    justify-content: flex-start;
-    width: auto;
-    padding: 0;
-  }
+.navbar-icons{
+  display: none;
 }
