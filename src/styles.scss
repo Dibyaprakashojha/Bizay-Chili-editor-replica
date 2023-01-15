@@ -268,6 +268,10 @@ body {
   mat-drawer-content {
     overflow: hidden !important;
   }
+  mat-drawer-container,
+  mat-drawer-content {
+    overflow: hidden !important;
+  }
 }
 // End of Media Query
 
