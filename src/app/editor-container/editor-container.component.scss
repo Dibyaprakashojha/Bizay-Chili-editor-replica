@@ -13,9 +13,9 @@ body {
     background: transparent;
   }
   .logo {
-    line-height: 1rem;
+    line-height: 0.8rem;
     img {
-      height: 1.5rem;
+      height: 2rem;
     }
   }
 }
@@ -489,6 +489,6 @@ mat-sidenav {
   }
 }
 
-.navbar-icons{
+.navbar-icons {
   display: none;
 }
