@@ -89,7 +89,7 @@ body {
   }
   .Zoom-property {
     position: absolute;
-    top: -52em !important;
+    top: -53em !important;
     padding-top: 0 !important;
     width: 27.67em !important;
     .mat-card {
@@ -219,7 +219,7 @@ body {
     justify-content: space-evenly;
     position: absolute;
     bottom: 27em;
-    right: 6em;
+    right: 5.8em;
   }
   .mobilePop {
     position: absolute;
@@ -252,8 +252,9 @@ body {
     display: none !important;
   }
   .pageparent {
-    height: 30px !important;
-    width: 88px !important;
+    height: 28px !important;
+    width: 80px !important;
+    margin: 14px !important;
   }
   .mobileViewP {
     display: block !important;
@@ -261,7 +262,11 @@ body {
   .editorimg {
     background: transparent !important;
     height: 25px !important;
-    margin: 4px 0 0 14px !important;
+    margin: 3px 0 0 10px !important;
+  }
+  mat-drawer-container,
+  mat-drawer-content {
+    overflow: hidden !important;
   }
   mat-drawer-container,
   mat-drawer-content {
