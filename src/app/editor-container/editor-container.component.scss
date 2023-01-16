@@ -479,13 +479,18 @@ mat-sidenav {
 
   .navbar-icons {
     padding: 0;
-    display: none;
     .toolbar-icons {
-      background-color: transparent;
-      display: inline-flex;
-      justify-content: flex-start;
-      width: auto;
-      padding: 0;
+      // background-color: transparent !important;
+      // display: inline-flex !important;
+      // justify-content: flex-start !important;
+      // width: auto !important;
+      // padding: 0 !important;
+      // position: absolute !important;
+      // bottom: 5rem !important;
+      button {
+        // padding: 0 !important;
+        // margin-top: 91rem !important;
+      }
     }
   }
 }

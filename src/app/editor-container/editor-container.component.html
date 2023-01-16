@@ -551,7 +551,7 @@
 
   <!-- Top Header -->
   <div style="background-color: white">
-    <div class="app-content" style="height: 100vh">
+    <div class="app-content" style="height: 100%">
       <mat-toolbar class="navbar">
         <a class="logo">
           <img src="assets\acheron-logo.png" alt="company-logo" />
@@ -561,6 +561,241 @@
         <mat-icon>account_box</mat-icon>
         <!-- </button> -->
       </mat-toolbar>
+      <!-- Toolbar for Mobile View -->
+      <mat-toolbar class="navbar-icons">
+        <div class="top-navbar-icons">
+          <div class="toolbar-icons">
+            <button
+              #menuOptionFont="matMenuTrigger"
+              [matMenuTriggerFor]="fontMenu"
+              (menuOpened)="isOpened(menuOptionFont.menuOpen)"
+              (click)="buttonClicked(1)"
+              class="common-width-btn"
+            >
+              <div class="align-container">
+                <mat-icon>font_download</mat-icon>
+                <!-- <span>Font</span> -->
+              </div>
+            </button>
+
+            <button
+              (click)="buttonClicked(2)"
+              #menuOptionSize="matMenuTrigger"
+              class="common-width-btn"
+              [matMenuTriggerFor]="sizeMenuDropdown"
+            >
+              <div class="align-container">
+                <mat-icon class="icon-ele"> format_size</mat-icon>
+                <!-- <span>Size</span> -->
+              </div>
+            </button>
+
+            <button class="common-width-btn">
+              <div class="align-container">
+                <mat-icon> format_bold</mat-icon>
+                <!-- <span>Bold</span> -->
+              </div>
+            </button>
+
+            <button class="common-width-btn">
+              <div class="align-container">
+                <mat-icon> format_italic</mat-icon>
+                <!-- <span>T</span> -->
+              </div>
+            </button>
+
+            <button class="common-width-btn" (click)="underLineText()">
+              <div class="align-container">
+                <mat-icon> format_underlined</mat-icon>
+                <!-- <span>Underline</span> -->
+              </div>
+            </button>
+
+            <button
+              class="common-width-btn"
+              (click)="buttonClicked(2)"
+              #menuOptioncolor="matMenuTrigger"
+              [matMenuTriggerFor]="colorMenuDropdown"
+            >
+              <div class="align-container">
+                <mat-icon> format_color_fill</mat-icon>
+                <!-- <span>Color</span> -->
+              </div>
+            </button>
+
+            <button
+              class="common-width-btn"
+              (click)="buttonClicked(2)"
+              #menuOptionAlign="matMenuTrigger"
+              [matMenuTriggerFor]="alignMenu"
+            >
+              <div class="align-container">
+                <mat-icon> format_align_center</mat-icon>
+                <!-- <span>Align</span> -->
+              </div>
+            </button>
+
+            <button class="common-width-btn">
+              <div class="align-container">
+                <mat-icon> format_line_spacing</mat-icon>
+                <!-- <span>Spacing</span> -->
+              </div>
+            </button>
+
+            <button class="common-width-btn">
+              <div class="align-container">
+                <mat-icon> format_list_bulleted</mat-icon>
+                <!-- <span>List</span> -->
+              </div>
+            </button>
+
+            <button class="common-width-btn">
+              <div class="align-container">
+                <mat-icon> wrap_text</mat-icon>
+                <!-- <span>Text Effects</span> -->
+              </div>
+            </button>
+
+            <!-- <button class="common-width-btn">
+              <div class="align-container">
+                <div class="roundIcon"></div>
+                <span>Arrange</span>
+              </div>
+            </button> -->
+
+            <button class="common-width-btn">
+              <div class="align-container">
+                <mat-slide-toggle>
+                  <!-- Wrap Text -->
+                </mat-slide-toggle>
+              </div>
+            </button>
+
+            <button
+              class="common-width-btn"
+              *ngIf="isFrameLocked === 'yes'"
+              (click)="lockFrame()"
+            >
+              <div class="align-container">
+                <img class="img-container" src="assets/Icons/Lock.svg" alt="" />
+                <!-- <span>Lock</span> -->
+              </div>
+            </button>
+
+            <button
+              class="common-width-btn"
+              *ngIf="isFrameLocked === 'no' || isFrameLocked === 'inherit'"
+              (click)="lockFrame()"
+            >
+              <div class="align-container">
+                <img
+                  class="img-container"
+                  src="assets/Icons/Unlock.svg"
+                  alt=""
+                />
+                <!-- <span>Unlock</span> -->
+              </div>
+            </button>
+          </div>
+
+          <div
+            class="toolbar-icons"
+            *ngIf="imageFrame === 'image' && !textFrame"
+          >
+            <button class="common-width">
+              <div class="align-container">
+                <div (click)="deleteFrame()" class="roundIcon"></div>
+                <span>Delete</span>
+              </div>
+            </button>
+          </div>
+
+          <mat-menu
+            #toggleButton
+            #fontMenu="matMenu"
+            class="fontMatMenu"
+            (clickOutside)="closeMenu()"
+          >
+            <button
+              class="common-width"
+              mat-menu-item
+              (click)="changeFontstyle(item)"
+              [value]="item"
+              *ngFor="let item of fontFamily"
+            >
+              {{ item.fontFamily }}
+            </button>
+          </mat-menu>
+
+          <mat-menu
+            (clickOutside)="closeMenu()"
+            class="sizeMatMenu"
+            #sizeMenuDropdown="matMenu"
+          >
+            <mat-option (click)="$event.stopPropagation()" class="sizeMenu">
+              <button class="sizeButtons" (click)="decreamentSize()">
+                <img src="assets/Icons/minus.svg" alt="" />
+              </button>
+              <input class="sizeInput" type="text" [(ngModel)]="sizeValue" />
+              <button class="sizeButtons" (click)="increamentSize()">
+                <img src="assets/Icons/plus.svg" alt="" />
+              </button>
+            </mat-option>
+          </mat-menu>
+
+          <mat-menu class="colorMatMenu" #colorMenuDropdown="matMenu">
+            <mat-tab-group
+              animationDuration="0ms"
+              (click)="$event.stopPropagation()"
+            >
+              <mat-tab label="Swatches">
+                <div class="chili-colorPicker__panel is-visible">
+                  <ul
+                    style="list-style: none"
+                    class="chili-colorPicker__swatches"
+                  >
+                    <li *ngFor="let item of colors">
+                      <span
+                        (click)="cmyk(item)"
+                        title="{{ item.color }}"
+                        class="chili-colorSwatch"
+                        [style.background-color]="item.cmykValue"
+                      ></span>
+                    </li>
+                  </ul>
+                </div>
+              </mat-tab>
+              <mat-tab label="Custom"> </mat-tab>
+              <mat-tab label="CMYK">CMYK</mat-tab>
+            </mat-tab-group>
+          </mat-menu>
+
+          <mat-menu
+            #toggleButton
+            #alignMenu="matMenu"
+            class="alignItems"
+            (clickOutside)="closeMenu()"
+          >
+            <mat-option (click)="$event.stopPropagation()" class="sizeMenu">
+              <div class="alignbar">
+                <button (click)="textLeft()">
+                  <div class="roundIcon"></div>
+                  <span>Left</span>
+                </button>
+                <button (click)="textCenter()">
+                  <div class="roundIcon"></div>
+                  <span>Center</span>
+                </button>
+                <button (click)="textRight()">
+                  <div class="roundIcon"></div>
+                  <span>Right</span>
+                </button>
+              </div>
+            </mat-option>
+          </mat-menu>
+        </div>
+      </mat-toolbar>
+      <!-- Toolbar for Mobile View -->
       <div class="editorBody">
         <div
           class="popUp"
@@ -606,235 +841,6 @@
         ></app-page-container>
       </div>
     </div>
-
-    <!-- Toolbar for Mobile View -->
-    <mat-toolbar class="navbar-icons">
-      <div class="top-navbar-icons">
-        <div class="toolbar-icons">
-          <button
-            #menuOptionFont="matMenuTrigger"
-            [matMenuTriggerFor]="fontMenu"
-            (menuOpened)="isOpened(menuOptionFont.menuOpen)"
-            (click)="buttonClicked(1)"
-            class="common-width"
-          >
-            <div class="align-container">
-              <mat-icon>font_download</mat-icon>
-              <!-- <span>Font</span> -->
-            </div>
-          </button>
-
-          <button
-            (click)="buttonClicked(2)"
-            #menuOptionSize="matMenuTrigger"
-            class="common-width"
-            [matMenuTriggerFor]="sizeMenuDropdown"
-          >
-            <div class="align-container">
-              <mat-icon class="icon-ele"> format_size</mat-icon>
-              <!-- <span>Size</span> -->
-            </div>
-          </button>
-
-          <button class="common-width">
-            <div class="align-container">
-              <mat-icon> format_bold</mat-icon>
-              <!-- <span>Bold</span> -->
-            </div>
-          </button>
-
-          <button class="common-width">
-            <div class="align-container">
-              <mat-icon> format_italic</mat-icon>
-              <!-- <span>T</span> -->
-            </div>
-          </button>
-
-          <button class="common-width" (click)="underLineText()">
-            <div class="align-container">
-              <mat-icon> format_underlined</mat-icon>
-              <!-- <span>Underline</span> -->
-            </div>
-          </button>
-
-          <button
-            class="common-width"
-            (click)="buttonClicked(2)"
-            #menuOptioncolor="matMenuTrigger"
-            [matMenuTriggerFor]="colorMenuDropdown"
-          >
-            <div class="align-container">
-              <mat-icon> format_color_fill</mat-icon>
-              <!-- <span>Color</span> -->
-            </div>
-          </button>
-
-          <button
-            class="common-width"
-            (click)="buttonClicked(2)"
-            #menuOptionAlign="matMenuTrigger"
-            [matMenuTriggerFor]="alignMenu"
-          >
-            <div class="align-container">
-              <mat-icon> format_align_center</mat-icon>
-              <!-- <span>Align</span> -->
-            </div>
-          </button>
-
-          <button class="common-width">
-            <div class="align-container">
-              <mat-icon> format_line_spacing</mat-icon>
-              <!-- <span>Spacing</span> -->
-            </div>
-          </button>
-
-          <button class="common-width">
-            <div class="align-container">
-              <mat-icon> format_list_bulleted</mat-icon>
-              <!-- <span>List</span> -->
-            </div>
-          </button>
-
-          <button class="common-width">
-            <div class="align-container">
-              <mat-icon> wrap_text</mat-icon>
-              <!-- <span>Text Effects</span> -->
-            </div>
-          </button>
-
-          <button class="common-width">
-            <div class="align-container">
-              <div class="roundIcon"></div>
-              <!-- <span>Arrange</span> -->
-            </div>
-          </button>
-
-          <button class="common-width">
-            <div class="align-container">
-              <mat-slide-toggle>
-                <!-- Wrap Text -->
-              </mat-slide-toggle>
-            </div>
-          </button>
-
-          <button
-            class="common-width"
-            *ngIf="isFrameLocked === 'yes'"
-            (click)="lockFrame()"
-          >
-            <div class="align-container">
-              <img src="assets/Icons/Lock.svg" alt="" />
-              <!-- <span>Lock</span> -->
-            </div>
-          </button>
-
-          <button
-            class="common-width"
-            *ngIf="isFrameLocked === 'no' || isFrameLocked === 'inherit'"
-            (click)="lockFrame()"
-          >
-            <div class="align-container">
-              <img class="img-container" src="assets/Icons/Unlock.svg" alt="" />
-              <!-- <span>Unlock</span> -->
-            </div>
-          </button>
-        </div>
-
-        <div class="toolbar-icons" *ngIf="imageFrame === 'image' && !textFrame">
-          <button class="common-width">
-            <div class="align-container">
-              <div (click)="deleteFrame()" class="roundIcon"></div>
-              <span>Delete</span>
-            </div>
-          </button>
-        </div>
-
-        <mat-menu
-          #toggleButton
-          #fontMenu="matMenu"
-          class="fontMatMenu"
-          (clickOutside)="closeMenu()"
-        >
-          <button
-            class="common-width"
-            mat-menu-item
-            (click)="changeFontstyle(item)"
-            [value]="item"
-            *ngFor="let item of fontFamily"
-          >
-            {{ item.fontFamily }}
-          </button>
-        </mat-menu>
-
-        <mat-menu
-          (clickOutside)="closeMenu()"
-          class="sizeMatMenu"
-          #sizeMenuDropdown="matMenu"
-        >
-          <mat-option (click)="$event.stopPropagation()" class="sizeMenu">
-            <button class="sizeButtons" (click)="decreamentSize()">
-              <img src="assets/Icons/minus.svg" alt="" />
-            </button>
-            <input class="sizeInput" type="text" [(ngModel)]="sizeValue" />
-            <button class="sizeButtons" (click)="increamentSize()">
-              <img src="assets/Icons/plus.svg" alt="" />
-            </button>
-          </mat-option>
-        </mat-menu>
-
-        <mat-menu class="colorMatMenu" #colorMenuDropdown="matMenu">
-          <mat-tab-group
-            animationDuration="0ms"
-            (click)="$event.stopPropagation()"
-          >
-            <mat-tab label="Swatches">
-              <div class="chili-colorPicker__panel is-visible">
-                <ul
-                  style="list-style: none"
-                  class="chili-colorPicker__swatches"
-                >
-                  <li *ngFor="let item of colors">
-                    <span
-                      (click)="cmyk(item)"
-                      title="{{ item.color }}"
-                      class="chili-colorSwatch"
-                      [style.background-color]="item.cmykValue"
-                    ></span>
-                  </li>
-                </ul>
-              </div>
-            </mat-tab>
-            <mat-tab label="Custom"> </mat-tab>
-            <mat-tab label="CMYK">CMYK</mat-tab>
-          </mat-tab-group>
-        </mat-menu>
-
-        <mat-menu
-          #toggleButton
-          #alignMenu="matMenu"
-          class="alignItems"
-          (clickOutside)="closeMenu()"
-        >
-          <mat-option (click)="$event.stopPropagation()" class="sizeMenu">
-            <div class="alignbar">
-              <button (click)="textLeft()">
-                <div class="roundIcon"></div>
-                <span>Left</span>
-              </button>
-              <button (click)="textCenter()">
-                <div class="roundIcon"></div>
-                <span>Center</span>
-              </button>
-              <button (click)="textRight()">
-                <div class="roundIcon"></div>
-                <span>Right</span>
-              </button>
-            </div>
-          </mat-option>
-        </mat-menu>
-      </div>
-    </mat-toolbar>
-    <!-- Toolbar for Mobile View -->
 
     <p *ngIf="isSidenavOpen" class="admin-sidenav-close-button">
       <button

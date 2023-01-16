@@ -264,9 +264,34 @@ body {
     height: 25px !important;
     margin: 3px 0 0 10px !important;
   }
-  mat-drawer-container,
-  mat-drawer-content {
-    overflow: hidden !important;
+  // mat-drawer-container,
+  // mat-drawer-content {
+  //   overflow: hidden !important;
+  // }
+  // button.common-width-btn {
+  //   // margin-top: 91rem !important;
+  //   position: relative !important;
+  //   top: 46rem !important;
+  // }
+  mat-toolbar.navbar-icons {
+    position: relative !important;
+    top: 45.5rem !important;
+    padding: 0 !important;
+    background: transparent !important;
+    height: 30px !important;
+  }
+  .common-width-btn {
+    padding: 0 !important;
+    background-color: transparent !important;
+    width: 2rem !important;
+  }
+  .toolbar-icons {
+    width: 25px !important;
+    background-color: transparent !important ;
+  }
+  .img-container {
+    margin-left: 12px !important;
+    height: 20px !important;
   }
 }
 // End of Media Query
