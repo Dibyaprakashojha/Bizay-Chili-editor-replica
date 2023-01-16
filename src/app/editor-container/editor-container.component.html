@@ -563,7 +563,7 @@
       </mat-toolbar>
       <!-- Toolbar for Mobile View -->
       <mat-toolbar class="navbar-icons">
-        <div class="top-navbar-icons">
+        <div class="top-navbar-icons" *ngIf="textFrame">
           <div class="toolbar-icons">
             <button
               #menuOptionFont="matMenuTrigger"
@@ -799,7 +799,12 @@
       <div class="editorBody">
         <div
           class="popUp"
-          [ngClass]="{ mobilePop: currentMsgFromLeftToPop == 0 }"
+          [ngClass]="{
+            mobilePop:
+              currentMsgFromLeftToPop == 0 ||
+              currentMsgFromLeftToPop == 1 ||
+              currentMsgFromLeftToPop == 4
+          }"
           *ngIf="currentSelectedControl == 1 && success"
         >
           <app-editor-control-popup

@@ -20,7 +20,7 @@
   <div *ngIf="currentMsgFromLeftToPop == 1" class="new-image">
     <div>
       <h2 style="color: #cac32f">Images</h2>
-      <!-- <span style="color: #cac32f;">upload your assets here for design.</span> -->
+      <span style="color: #cac32f">Upload your assets here for design.</span>
       <input
         style="display: none"
         type="file"
@@ -39,7 +39,7 @@
         mat-raised-button
         color="accent"
       >
-        upload
+        Upload
       </button>
     </div>
   </div>
@@ -51,10 +51,11 @@
   </div>
   <div *ngIf="currentMsgFromLeftToPop == 4" class="layers">
     <div>
-      <h2>Layers</h2>
-      <button class="addLayers">
+      <h2 style="color: #cac32f">Layers</h2>
+      <span style="color: #cac32f">Add more layers here to edit for your design.</span> <br>
+      <button class="addLayers" mat-raised-button color="accent">
         <!-- <img src="../../../assets/Icons/plus.svg" alt=""> -->
-        <span>Add layers</span>
+        <span style="color: #ffffff">Add layers</span>
       </button>
     </div>
   </div>

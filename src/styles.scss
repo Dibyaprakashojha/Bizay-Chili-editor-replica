@@ -183,13 +183,13 @@ body {
     gap: 3.5px !important;
     width: 263px !important;
     padding: 8px !important;
-    .textPopUp {
+    .textPopUp,.new-image,.layers {
       display: flex !important;
       flex-direction: column !important;
       gap: 5px !important;
       width: 240px !important;
     }
-    .new-image,
+    
     .background,
     .qrCode {
       position: absolute !important;
@@ -202,17 +202,17 @@ body {
         }
       }
     }
-    .layers {
-      position: absolute !important;
-      align-items: center !important;
-      left: 11em !important;
-      bottom: 13em !important;
-      .mobileButtons {
-        button {
-          display: none !important;
-        }
-      }
-    }
+    //  {
+    //   position: absolute !important;
+    //   align-items: center !important;
+    //   left: 11em !important;
+    //   bottom: 13em !important;
+    //   .mobileButtons {
+    //     button {
+    //       display: none !important;
+    //     }
+    //   }
+    // }
   }
   .previewContainer {
     display: flex;
@@ -264,10 +264,10 @@ body {
     height: 25px !important;
     margin: 3px 0 0 10px !important;
   }
-  // mat-drawer-container,
-  // mat-drawer-content {
-  //   overflow: hidden !important;
-  // }
+  mat-drawer-container,
+  mat-drawer-content {
+    overflow: hidden !important;
+  }
   // button.common-width-btn {
   //   // margin-top: 91rem !important;
   //   position: relative !important;
