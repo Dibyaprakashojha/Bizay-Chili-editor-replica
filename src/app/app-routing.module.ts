@@ -1,6 +1,6 @@
 import { EditorContainerComponent } from './editor-container/editor-container.component';
 import { AppComponent } from './app.component';
-import { BizaySiteReplicaComponent } from './bizay-site-replica/bizay-site-replica.component';
+import { ChilliSiteReplicaComponent } from './chilli-site-replica/chilli-site-replica.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -11,7 +11,7 @@ const routes: Routes = [
 },
 {
   path:'demo',
-  component:BizaySiteReplicaComponent
+  component:ChilliSiteReplicaComponent
 },
 { path: "chili", component: EditorContainerComponent },
 

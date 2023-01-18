@@ -458,6 +458,11 @@ mat-sidenav {
   overflow-x: hidden;
   overflow-y: hidden !important;
 }
+@media only screen and (min-width: 450px) {
+  mat-toolbar.navbar-icons {
+    display: none;
+  }
+}
 
 @media only screen and (max-width: 390px) {
   .app-content {
@@ -477,20 +482,20 @@ mat-sidenav {
     height: 100% !important;
   }
 
-  .navbar-icons {
-    padding: 0;
-    .toolbar-icons {
-      // background-color: transparent !important;
-      // display: inline-flex !important;
-      // justify-content: flex-start !important;
-      // width: auto !important;
-      // padding: 0 !important;
-      // position: absolute !important;
-      // bottom: 5rem !important;
-      button {
-        // padding: 0 !important;
-        // margin-top: 91rem !important;
-      }
-    }
-  }
+  // .navbar-icons {
+  //   padding: 0;
+  //   .toolbar-icons {
+  //     background-color: transparent !important;
+  //     display: inline-flex !important;
+  //     justify-content: flex-start !important;
+  //     width: auto !important;
+  //     padding: 0 !important;
+  //     position: absolute !important;
+  //     bottom: 5rem !important;
+  //     button {
+  //       padding: 0 !important;
+  //       margin-top: 91rem !important;
+  //     }
+  //   }
+  // }
 }

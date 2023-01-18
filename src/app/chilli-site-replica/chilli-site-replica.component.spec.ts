@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BizaySiteReplicaComponent } from './bizay-site-replica.component';
+import { BizaySiteReplicaComponent } from './chilli-site-replica.component';
 
 describe('BizaySiteReplicaComponent', () => {
   let component: BizaySiteReplicaComponent;

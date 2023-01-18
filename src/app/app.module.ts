@@ -1,4 +1,4 @@
-import { BizaySiteReplicaComponent } from './bizay-site-replica/bizay-site-replica.component';
+import { ChilliSiteReplicaComponent } from './chilli-site-replica/chilli-site-replica.component';
 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -13,7 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
     declarations: [
-        BizaySiteReplicaComponent,
+        ChilliSiteReplicaComponent,
         AppComponent
     ],
     providers: [

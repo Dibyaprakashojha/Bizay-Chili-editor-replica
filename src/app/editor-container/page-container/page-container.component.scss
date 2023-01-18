@@ -86,13 +86,32 @@
 //   margin-top: 10px;
 
 @media only screen and (max-width: 390px) {
-  .pageparent {
-    margin-right: 13px;
-    .mobileViewP {
-      // padding: 3px 0 0 15px;
-    }
-    .frontpage {
-      display: none;
-    }
-  }
+  // .pageparent {
+  //   height: 100px !important;
+  //   width: 100px !important;
+  //   box-sizing: border-box !important;
+  //   background: #cac32f !important;
+  //   border: 1px solid #cac32f !important;
+  //   border-radius: 4px !important;
+  //   margin-bottom: -6em !important;
+  //   margin-right: 0.5em !important;
+  //   .mobileViewP {
+  //     display: none !important;
+  //   }
+  //   .frontpage {
+  //     font-family: Open Sans !important;
+  //     font-style: normal !important;
+  //     font-weight: 700 !important;
+  //     font-size: 12px !important;
+  //     line-height: 16px !important;
+  //     text-align: center !important;
+  //     margin-top: 4.3em !important;
+  //   }
+  //   img.previewImage {
+  //     margin-left: 10px !important;
+  //     margin-top: 3px !important;
+  //     width: calc(100% - 1px) !important;
+  //     height: 72px !important;
+  //   }
+  // }
 }

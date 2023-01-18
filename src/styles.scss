@@ -52,7 +52,7 @@ body {
   .editor {
     width: auto !important;
     position: absolute !important;
-    top: 5em;
+    top: 11em; // editor brought down
     right: 1px !important;
     // height: 430px !important;
     .editSpace {
@@ -89,7 +89,7 @@ body {
   }
   .Zoom-property {
     position: absolute;
-    top: -53em !important;
+    top: -52em !important;
     padding-top: 0 !important;
     width: 27.67em !important;
     .mat-card {
@@ -183,13 +183,15 @@ body {
     gap: 3.5px !important;
     width: 263px !important;
     padding: 8px !important;
-    .textPopUp,.new-image,.layers {
+    .textPopUp,
+    .new-image,
+    .layers {
       display: flex !important;
       flex-direction: column !important;
       gap: 5px !important;
       width: 240px !important;
     }
-    
+
     .background,
     .qrCode {
       position: absolute !important;
@@ -218,7 +220,7 @@ body {
     display: flex;
     justify-content: space-evenly;
     position: absolute;
-    bottom: 27em;
+    bottom: 24em; // buttons brought down
     right: 5.8em;
   }
   .mobilePop {
@@ -249,16 +251,52 @@ body {
     }
   }
   .previewImage {
-    display: none !important;
+    position: relative !important;
+    right: 16px !important;
   }
+  // .pageparent {
+  // height: 28px !important;
+  // width: 80px !important;
+  // margin: 14px !important;
+  // }
+
+  // .mobileViewP {
+  // display: block !important;
+  // }
+
   .pageparent {
-    height: 28px !important;
-    width: 80px !important;
-    margin: 14px !important;
+    height: 100px !important;
+    width: 100px !important;
+    box-sizing: border-box !important;
+    background: #cac32f !important;
+    border: 1px solid #cac32f !important;
+    border-radius: 4px !important;
+    margin-bottom: -6em !important;
+    margin-right: 0.5em !important;
+    .mobileViewP {
+      display: none !important;
+    }
+    .frontpage {
+      font-family: Open Sans !important;
+      font-style: normal !important;
+      font-weight: 700 !important;
+      font-size: 12px !important;
+      line-height: 16px !important;
+      text-align: center !important;
+      margin-top: 4.3em !important;
+    }
+    img.previewImage {
+      margin-left: 10px !important;
+      margin-top: 3px !important;
+      width: calc(100% - 1px) !important;
+      height: 72px !important;
+    }
   }
-  .mobileViewP {
-    display: block !important;
-  }
+
+  // .btn-ele {
+  //   display: none !important;
+  // }
+
   .editorimg {
     background: transparent !important;
     height: 25px !important;
@@ -275,15 +313,30 @@ body {
   // }
   mat-toolbar.navbar-icons {
     position: relative !important;
-    top: 45.5rem !important;
+    top: 42rem !important;
     padding: 0 !important;
     background: transparent !important;
     height: 30px !important;
   }
+
+  mat-toolbar-row.toolbar-row-top {
+    height: 35px !important;
+    padding: 0 10px !important;
+  }
+
+  mat-toolbar-row.toolbar-row-bottom {
+    height: 35px !important;
+    padding: 0 10px !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    flex-direction: column !important;
+    margin-left: 100% !important;
+  }
+
   .common-width-btn {
-    padding: 0 !important;
+    padding: 11px !important;
     background-color: transparent !important;
-    width: 2rem !important;
+    width: 4rem !important;
   }
   .toolbar-icons {
     width: 25px !important;

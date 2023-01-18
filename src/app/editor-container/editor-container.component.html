@@ -565,137 +565,145 @@
       <mat-toolbar class="navbar-icons">
         <div class="top-navbar-icons" *ngIf="textFrame">
           <div class="toolbar-icons">
-            <button
-              #menuOptionFont="matMenuTrigger"
-              [matMenuTriggerFor]="fontMenu"
-              (menuOpened)="isOpened(menuOptionFont.menuOpen)"
-              (click)="buttonClicked(1)"
-              class="common-width-btn"
-            >
-              <div class="align-container">
-                <mat-icon>font_download</mat-icon>
-                <!-- <span>Font</span> -->
-              </div>
-            </button>
+            <mat-toolbar-row class="toolbar-row-top">
+              <button
+                #menuOptionFont="matMenuTrigger"
+                [matMenuTriggerFor]="fontMenu"
+                (menuOpened)="isOpened(menuOptionFont.menuOpen)"
+                (click)="buttonClicked(1)"
+                class="common-width-btn"
+              >
+                <div class="align-container">
+                  <mat-icon>font_download</mat-icon>
+                  <!-- <span>Font</span> -->
+                </div>
+              </button>
 
-            <button
-              (click)="buttonClicked(2)"
-              #menuOptionSize="matMenuTrigger"
-              class="common-width-btn"
-              [matMenuTriggerFor]="sizeMenuDropdown"
-            >
-              <div class="align-container">
-                <mat-icon class="icon-ele"> format_size</mat-icon>
-                <!-- <span>Size</span> -->
-              </div>
-            </button>
+              <button
+                (click)="buttonClicked(2)"
+                #menuOptionSize="matMenuTrigger"
+                class="common-width-btn"
+                [matMenuTriggerFor]="sizeMenuDropdown"
+              >
+                <div class="align-container">
+                  <mat-icon class="icon-ele"> format_size</mat-icon>
+                  <!-- <span>Size</span> -->
+                </div>
+              </button>
 
-            <button class="common-width-btn">
-              <div class="align-container">
-                <mat-icon> format_bold</mat-icon>
-                <!-- <span>Bold</span> -->
-              </div>
-            </button>
+              <button class="common-width-btn">
+                <div class="align-container">
+                  <mat-icon> format_bold</mat-icon>
+                  <!-- <span>Bold</span> -->
+                </div>
+              </button>
 
-            <button class="common-width-btn">
-              <div class="align-container">
-                <mat-icon> format_italic</mat-icon>
-                <!-- <span>T</span> -->
-              </div>
-            </button>
+              <button class="common-width-btn">
+                <div class="align-container">
+                  <mat-icon> format_italic</mat-icon>
+                  <!-- <span>T</span> -->
+                </div>
+              </button>
 
-            <button class="common-width-btn" (click)="underLineText()">
-              <div class="align-container">
-                <mat-icon> format_underlined</mat-icon>
-                <!-- <span>Underline</span> -->
-              </div>
-            </button>
+              <button class="common-width-btn" (click)="underLineText()">
+                <div class="align-container">
+                  <mat-icon> format_underlined</mat-icon>
+                  <!-- <span>Underline</span> -->
+                </div>
+              </button>
 
-            <button
-              class="common-width-btn"
-              (click)="buttonClicked(2)"
-              #menuOptioncolor="matMenuTrigger"
-              [matMenuTriggerFor]="colorMenuDropdown"
-            >
-              <div class="align-container">
-                <mat-icon> format_color_fill</mat-icon>
-                <!-- <span>Color</span> -->
-              </div>
-            </button>
+              <button
+                class="common-width-btn"
+                (click)="buttonClicked(2)"
+                #menuOptioncolor="matMenuTrigger"
+                [matMenuTriggerFor]="colorMenuDropdown"
+              >
+                <div class="align-container">
+                  <mat-icon> format_color_fill</mat-icon>
+                  <!-- <span>Color</span> -->
+                </div>
+              </button>
 
-            <button
-              class="common-width-btn"
-              (click)="buttonClicked(2)"
-              #menuOptionAlign="matMenuTrigger"
-              [matMenuTriggerFor]="alignMenu"
-            >
-              <div class="align-container">
-                <mat-icon> format_align_center</mat-icon>
-                <!-- <span>Align</span> -->
-              </div>
-            </button>
+              <button
+                class="common-width-btn"
+                (click)="buttonClicked(2)"
+                #menuOptionAlign="matMenuTrigger"
+                [matMenuTriggerFor]="alignMenu"
+              >
+                <div class="align-container">
+                  <mat-icon> format_align_center</mat-icon>
+                  <!-- <span>Align</span> -->
+                </div>
+              </button>
+            </mat-toolbar-row>
 
-            <button class="common-width-btn">
-              <div class="align-container">
-                <mat-icon> format_line_spacing</mat-icon>
-                <!-- <span>Spacing</span> -->
-              </div>
-            </button>
+            <mat-toolbar-row class="toolbar-row-bottom">
+              <button class="common-width-btn">
+                <div class="align-container">
+                  <mat-icon> format_line_spacing</mat-icon>
+                  <!-- <span>Spacing</span> -->
+                </div>
+              </button>
 
-            <button class="common-width-btn">
-              <div class="align-container">
-                <mat-icon> format_list_bulleted</mat-icon>
-                <!-- <span>List</span> -->
-              </div>
-            </button>
+              <button class="common-width-btn">
+                <div class="align-container">
+                  <mat-icon> format_list_bulleted</mat-icon>
+                  <!-- <span>List</span> -->
+                </div>
+              </button>
 
-            <button class="common-width-btn">
-              <div class="align-container">
-                <mat-icon> wrap_text</mat-icon>
-                <!-- <span>Text Effects</span> -->
-              </div>
-            </button>
+              <button class="common-width-btn">
+                <div class="align-container">
+                  <mat-icon> wrap_text</mat-icon>
+                  <!-- <span>Text Effects</span> -->
+                </div>
+              </button>
 
-            <!-- <button class="common-width-btn">
+              <!-- <button class="common-width-btn">
               <div class="align-container">
                 <div class="roundIcon"></div>
                 <span>Arrange</span>
               </div>
             </button> -->
 
-            <button class="common-width-btn">
-              <div class="align-container">
-                <mat-slide-toggle>
-                  <!-- Wrap Text -->
-                </mat-slide-toggle>
-              </div>
-            </button>
+              <button class="common-width-btn">
+                <div class="align-container">
+                  <mat-slide-toggle>
+                    <!-- Wrap Text -->
+                  </mat-slide-toggle>
+                </div>
+              </button>
 
-            <button
-              class="common-width-btn"
-              *ngIf="isFrameLocked === 'yes'"
-              (click)="lockFrame()"
-            >
-              <div class="align-container">
-                <img class="img-container" src="assets/Icons/Lock.svg" alt="" />
-                <!-- <span>Lock</span> -->
-              </div>
-            </button>
+              <button
+                class="common-width-btn"
+                *ngIf="isFrameLocked === 'yes'"
+                (click)="lockFrame()"
+              >
+                <div class="align-container">
+                  <img
+                    class="img-container"
+                    src="assets/Icons/Lock.svg"
+                    alt=""
+                  />
+                  <!-- <span>Lock</span> -->
+                </div>
+              </button>
 
-            <button
-              class="common-width-btn"
-              *ngIf="isFrameLocked === 'no' || isFrameLocked === 'inherit'"
-              (click)="lockFrame()"
-            >
-              <div class="align-container">
-                <img
-                  class="img-container"
-                  src="assets/Icons/Unlock.svg"
-                  alt=""
-                />
-                <!-- <span>Unlock</span> -->
-              </div>
-            </button>
+              <button
+                class="common-width-btn"
+                *ngIf="isFrameLocked === 'no' || isFrameLocked === 'inherit'"
+                (click)="lockFrame()"
+              >
+                <div class="align-container">
+                  <img
+                    class="img-container"
+                    src="assets/Icons/Unlock.svg"
+                    alt=""
+                  />
+                  <!-- <span>Unlock</span> -->
+                </div>
+              </button>
+            </mat-toolbar-row>
           </div>
 
           <div
