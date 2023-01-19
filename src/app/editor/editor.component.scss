@@ -1,60 +1,58 @@
-.editor{
-    width: 590px;
-    height: 390px;
-    // border: 1px solid grey;
-    margin: 0 auto;
-    p{
-        display: flex;
-        height: 30px;
-        justify-content: center;
-        align-items: center;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 18px;
-        text-align: center;
-        color: #85878A;
-        margin: 0px;
-    }
-    .editSpace{
-        background: #E9EBF0;
-        width: 100%;
-        height: 100%;
-    }
-}
+.editor {
+  width: 590px;
+  height: 390px;
+  margin: 0 auto;
 
-.btn-ele{
-    border: 0px;
-    background-color: transparent;
-    color: grey;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: 500;
-    padding-top: 10px;
-    height:4vh;
-    
-  }
-  .card-editor{
-    height: 26px;
-    width: 570px;
-    left: 0px;
-    top: -30px;
-    border-radius: 0px;
+  // border: 1px solid grey;
+  p {
     display: flex;
-    justify-content: space-around;
+    height: 30px;
+    justify-content: center;
     align-items: center;
-    border: 1px solid transparent;
-
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    color: #85878a;
+    margin: 0px;
   }
-  #chili-iframe1{
-    width: 590px;
-    height: 390px;
+  .editSpace {
+    background: #e9ebf0;
+    width: 100%;
+    height: 100%;
+  }
 }
 
+.btn-ele {
+  border: 0px;
+  background-color: transparent;
+  color: grey;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  padding-top: 10px;
+  height: 4vh;
+}
+.card-editor {
+  height: 26px;
+  width: 570px;
+  left: 0px;
+  top: -30px;
+  border-radius: 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid transparent;
+}
+#chili-iframe1 {
+  width: 590px;
+  height: 390px;
+}
 
-@media(max-width: 550px){
-    .chilli-frame{
-        width: 99% !important;
-        height: 100% !important;
-    }
-   
+@media only screen and (max-width: 767px),
+  only screen and (min-width: 768px) and (max-width: 1023px) {
+  .chilli-frame {
+    width: 99% !important;
+    height: 100% !important;
   }
+}

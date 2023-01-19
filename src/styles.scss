@@ -6,14 +6,16 @@
 }
 html,
 body {
-  height: 100%;
+  height: 100%; //
 }
 body {
   margin: 0;
   font-family: "Open Sans" !important;
 }
 
-@media screen and (min-width: 290px) and (max-width: 450px) {
+// @media screen and (min-width: 290px) and (max-width: 450px) {
+@media only screen and (max-width: 767px),
+  only screen and (min-width: 768px) and (max-width: 1023px) {
   body {
     width: 100%;
   }
@@ -25,6 +27,18 @@ body {
     width: 100% !important;
     height: 100% !important;
   }
+  // #chili-iframe1 {
+  //   // width: 390px !important;
+  //   padding: 20px;
+  // position: absolute !important;
+  // top: 5em !important;
+  // z-index: 999 !important;
+  // transform: scale(1) !important;
+  // margin: 100px 0px 200px !important;
+  // width: calc(100vw - 10em) !important;
+  // height: calc(100vh - 40em) !important;
+  // // z-index: 0;
+  // }
   .logoAndText {
     img {
       width: 100px;
@@ -50,14 +64,27 @@ body {
   //   width: 390px !important;
   // }
   .editor {
-    width: auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    flex-direction: column;
+    width: calc(100% - 2.5em) !important;
+    height: 400px;
+    padding: 0 20px;
     position: absolute !important;
-    top: 11em; // editor brought down
-    right: 1px !important;
-    // height: 430px !important;
+    top: 2.5em !important;
+    z-index: 999 !important;
+    // transform: scale(1) !important;
+    // margin: 100px 0px 200px !important;
+    // width: calc(100vw - 40px) !important;
+    // height: calc(100vh - 370px) !important;
+    // z-index: 0;
+    //top: 11em; // editor brought down
+    // width: auto !important;
+    // right: 1px !important;
+    // // height: 430px !important;
     .editSpace {
-      width: 100vw !important;
-      height: 75% !important;
+      width: 100% !important;
+      height: 70% !important; //
     }
   }
   .buttonContain {
@@ -88,16 +115,20 @@ body {
     bottom: 30px !important;
   }
   .Zoom-property {
-    position: absolute;
-    top: -52em !important;
+    position: relative; //
+    position: fixed;
+    margin-top: 50px;
+    // top: -52em !important;
     padding-top: 0 !important;
-    width: 27.67em !important;
+    width: 100% !important; //
+    // height: 100% !important;
     .mat-card {
       display: flex;
       flex-direction: row;
-      justify-content: flex-start !important;
+      justify-content: space-evenly !important;
       align-items: center;
       padding: 0px 8px;
+      // top: 12em !important; //
     }
     .zoom-slider {
       .minusicon,
@@ -219,17 +250,20 @@ body {
   .previewContainer {
     display: flex;
     justify-content: space-evenly;
-    position: absolute;
-    bottom: 24em; // buttons brought down
+    position: fixed;
+    margin-top: 23em;
+    right: 25%;
+    left: 25%;
+    // bottom: 24em; // buttons brought down
     right: 5.8em;
   }
   .mobilePop {
     position: absolute;
     width: 80% !important;
-    height: 36%;
-    top: 33.5em;
+    min-height: 43%;
+    top: 20em;
     margin: 0 37px;
-    z-index: 2;
+    z-index: 9999;
     background-color: #fff !important;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
@@ -265,14 +299,16 @@ body {
   // }
 
   .pageparent {
-    height: 100px !important;
-    width: 100px !important;
+    height: 60px !important;
+    width: 60px !important;
     box-sizing: border-box !important;
     background: #cac32f !important;
     border: 1px solid #cac32f !important;
     border-radius: 4px !important;
     margin-bottom: -6em !important;
     margin-right: 0.5em !important;
+    // position: relative !important; //
+    // top: 14em !important; //
     .mobileViewP {
       display: none !important;
     }
@@ -280,16 +316,16 @@ body {
       font-family: Open Sans !important;
       font-style: normal !important;
       font-weight: 700 !important;
-      font-size: 12px !important;
+      font-size: 9px !important;
       line-height: 16px !important;
       text-align: center !important;
-      margin-top: 4.3em !important;
+      margin-top: 1.5em !important;
     }
     img.previewImage {
       margin-left: 10px !important;
       margin-top: 3px !important;
-      width: calc(100% - 1px) !important;
-      height: 72px !important;
+      width: 50px !important;
+      height: 40px !important;
     }
   }
 
@@ -321,30 +357,46 @@ body {
 
   mat-toolbar-row.toolbar-row-top {
     height: 35px !important;
+    margin: 0 2px !important;
     padding: 0 10px !important;
+    position: absolute !important;
+    justify-content: space-evenly !important;
   }
 
   mat-toolbar-row.toolbar-row-bottom {
     height: 35px !important;
     padding: 0 10px !important;
-    display: flex !important;
-    flex-wrap: wrap !important;
-    flex-direction: column !important;
-    margin-left: 100% !important;
+    position: absolute !important;
+    justify-content: space-evenly !important;
+    top: 42px !important;
+    // display: flex !important;
+    // flex-wrap: wrap !important;
+    // flex-direction: column !important;
+    // margin-left: 100% !important;
   }
 
   .common-width-btn {
-    padding: 11px !important;
+    padding: 5px !important;
     background-color: transparent !important;
     width: 4rem !important;
   }
   .toolbar-icons {
-    width: 25px !important;
+    width: 100% !important;
     background-color: transparent !important ;
+    display: flex;
+    position: relative;
+    bottom: 9.5em;
+    // position: absolute !important; //
+    // bottom: 6em !important; //
   }
   .img-container {
     margin-left: 12px !important;
     height: 20px !important;
+  }
+  
+  mat-drawer.example-sidenav{
+    display: none !important;
+    visibility: hidden !important;
   }
 }
 // End of Media Query

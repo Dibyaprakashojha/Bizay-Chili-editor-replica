@@ -40,7 +40,7 @@ export class EditorComponent implements OnInit {
         this.newEvent.emit(this.textFrame);
       }
       let unslected =window["editorObject"].GetObject('document.selectedFrame')
-      console.log("unselecre"+ unslected)
+      console.log("unselected"+ unslected)
       if(unslected==='null'|| unslected===null){
         console.log("nullllll ")
         this.newEvent.emit("null");

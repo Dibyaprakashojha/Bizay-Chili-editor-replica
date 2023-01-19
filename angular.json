@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "bizay-editor-app": {
+    "chilli-editor-app": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/bizay-editor-app",
+            "outputPath": "dist/chilli-editor-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -71,10 +71,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "bizay-editor-app:build:production"
+              "browserTarget": "chilli-editor-app:build:production"
             },
             "development": {
-              "browserTarget": "bizay-editor-app:build:development"
+              "browserTarget": "chilli-editor-app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -82,7 +82,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "bizay-editor-app:build"
+            "browserTarget": "chilli-editor-app:build"
           }
         },
         "test": {

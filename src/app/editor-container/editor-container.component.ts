@@ -12,6 +12,7 @@ import { ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import * as X2JS from 'x2js';
 import { EditorControlPopupComponent } from './editor-control-popup/editor-control-popup.component';
 import { MatMenuTrigger } from '@angular/material/menu';
+import { MatDrawer } from '@angular/material/sidenav';
 const x2js = new X2JS();
 @Component({
   selector: 'app-editor-container',
@@ -239,6 +240,7 @@ export class EditorContainerComponent implements OnInit {
   textFrameSelected: any;
   imageFrame: any;
   isSidenavOpen1:boolean=false
+  @ViewChild('drawer') public drawer: MatDrawer;
   constructor(private ref: ChangeDetectorRef, private renderer: Renderer2) { }
 
   addFrame(): string {
@@ -294,6 +296,9 @@ export class EditorContainerComponent implements OnInit {
         window['editorObject'].GetObject('document.selectedText') &&
         window['editorObject'].GetObject('document.selectedText') !== 'null'
       ) {
+        if(window.screen.width > 1024){
+        this.drawer.toggle();
+        }
         let val = window['editorObject'].GetObject(
           'document.selectedText.textFormat'
         ).fontSize;

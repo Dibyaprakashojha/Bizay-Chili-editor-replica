@@ -16,5 +16,5 @@ export class AppComponent implements OnInit{
       config.setConfig(environment);
     }
   }
-  title = 'bizay-editor-app';
+  title = 'chilli-editor-app';
 }

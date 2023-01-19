@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/bizay-editor-app'),
+      dir: require('path').join(__dirname, './coverage/chilli-editor-app'),
       subdir: '.',
       reporters: [
         { type: 'html' },
